@@ -41,13 +41,11 @@ A static, no-framework marketing site for a women's luxury East Africa travel br
 - Made the setup durable (persistent preview copy, scripts in `tools/`, one-command deploy build).
 
 ## Next steps (pick up here)
-1. **★ TOP PRIORITY (user's explicit ask): make Tanzania, Uganda & Rwanda fully functional like Kenya.**
-   _Progress: ✅ **TANZANIA COMPLETE** and ✅ **UGANDA COMPLETE** — both fully mimic Kenya (6 itinerary pages
-   + 6 highlight articles + best-time + all cards wired). Uganda articles: bwindi, queen-elizabeth,
-   kibale-forest, murchison-falls, lake-bunyonyi, jinja-nile, best-time-uganda. ▶ LAST ONE: **Rwanda** —
-   still needs its 6 itinerary pages + 6 highlight articles + best-time-rwanda, then wire rwanda.html's
-   journey/highlight/season cards._
-   Kenya is the fully-built reference. For EACH of TZ/UG/RW:
+1. ✅✅✅ **DONE — Tanzania, Uganda & Rwanda all now fully mimic Kenya** (6 itinerary detail pages + 6
+   highlight articles + a best-time article each, with every destination page's journey/highlight/season
+   cards wired). All four destinations are now functionally identical. Sitewide broken-link check: clean.
+   60 HTML pages total. _(Reference detail kept below for future itineraries/articles.)_
+   Kenya is the reference build. The pattern used for EACH of TZ/UG/RW:
    - **Itineraries:** build an itinerary-detail page for every journey card (mirror `classic-kenya-safari.html`
      — hero at-a-glance bar, day-by-day with photos, Camps & Lodges, rates table, what's-included),
      and point each "Enquire →" at it instead of `contact.html?trip=…`.
