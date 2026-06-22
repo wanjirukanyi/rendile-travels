@@ -140,6 +140,8 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:500;line-height:1.1;letter-spac
 /* ---------- Sections ---------- */
 .section{padding:6.5rem 0}
 .section--cream{background:var(--cream)}
+/* two same-colour sections in a row shouldn't double their padding into one huge gap */
+.section--cream + .section--cream{padding-top:0}
 .section--dark{background:var(--green);color:#F3EEE4}
 .section__head{max-width:680px;margin:0 auto 3.5rem;text-align:center}
 .section__head--left{text-align:left;margin-left:0}
