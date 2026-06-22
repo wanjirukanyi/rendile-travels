@@ -42,10 +42,10 @@ A static, no-framework marketing site for a women's luxury East Africa travel br
 
 ## Next steps (pick up here)
 1. **★ TOP PRIORITY (user's explicit ask): make Tanzania, Uganda & Rwanda fully functional like Kenya.**
-   _Progress: ✅ Tanzania's 6 itinerary-detail pages built & wired (classic-northern-circuit,
-   tanzania-great-migration, serengeti-and-zanzibar, kilimanjaro-wild-north, tanzania-family-safari,
-   women-only-tanzania). Still to do for Tanzania: highlight articles + best-time. Then repeat all of it for
-   Uganda & Rwanda._
+   _Progress: ✅ **TANZANIA COMPLETE** — fully mimics Kenya now: 6 itinerary-detail pages, 6 highlight
+   articles (serengeti, ngorongoro-crater, tarangire, kilimanjaro, lake-manyara, zanzibar) + best-time-tanzania,
+   all cards wired (journey "View itinerary →", highlight + season cards clickable). ▶ NEXT: replicate the
+   whole pattern to **Uganda**, then **Rwanda** (6 itineraries + 6 highlight articles + best-time + wiring each)._
    Kenya is the fully-built reference. For EACH of TZ/UG/RW:
    - **Itineraries:** build an itinerary-detail page for every journey card (mirror `classic-kenya-safari.html`
      — hero at-a-glance bar, day-by-day with photos, Camps & Lodges, rates table, what's-included),
