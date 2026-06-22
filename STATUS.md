@@ -12,6 +12,14 @@ A static, no-framework marketing site for a women's luxury East Africa travel br
   Quick alternative: `python3 -m http.server 8000` from this folder.
 - **Deploy zip:** `sh tools/build-deploy.sh` → `rendile-travels-site.zip` (drag into Cloudflare Pages).
 
+## Backup & recovery (off-machine — set up 2026-06-22)
+- **GitHub (private):** https://github.com/wanjirukanyi/rendile-travels — the off-machine source of record.
+  **Save your work after editing:** `git add -A && git commit -m "…" && git push`.
+- **iCloud:** dated full-source zips in `~/Library/Mobile Documents/.../Rendile Travels Backups/`.
+- **Recover on a new machine:** `git clone https://github.com/wanjirukanyi/rendile-travels.git`
+  (or unzip the iCloud backup). Then `sh tools/sync-preview.sh` + preview as above.
+- The deploy zip is git-ignored (rebuild it); the parent Odoo `.env` is NOT in this repo (root is this folder).
+
 ## Pages (all built, wired, verified live)
 - **Home:** index.html
 - **Destinations (rich):** kenya, tanzania, uganda, rwanda
