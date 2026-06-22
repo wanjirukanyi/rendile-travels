@@ -41,10 +41,17 @@ A static, no-framework marketing site for a women's luxury East Africa travel br
 - Made the setup durable (persistent preview copy, scripts in `tools/`, one-command deploy build).
 
 ## Next steps (pick up here)
-1. Upgrade the other 5 Kenya itineraries to the **full** `classic-kenya-safari.html` template
-   (day photos, Camps & Lodges, rates table, what's-included). Only classic-kenya-safari has it.
-2. Build sub-pages for Tanzania/Uganda/Rwanda: per-highlight SEO articles + itinerary-detail pages.
-   Until then their highlight/season cards are non-clickable and journey cards go to `contact.html?trip=…`.
+1. **★ TOP PRIORITY (user's explicit ask): make Tanzania, Uganda & Rwanda fully functional like Kenya.**
+   Kenya is the fully-built reference. For EACH of TZ/UG/RW:
+   - **Itineraries:** build an itinerary-detail page for every journey card (mirror `classic-kenya-safari.html`
+     — hero at-a-glance bar, day-by-day with photos, Camps & Lodges, rates table, what's-included),
+     and point each "Enquire →" at it instead of `contact.html?trip=…`.
+   - **Highlights:** build a per-highlight SEO article (mirror `maasai-mara.html`) and make the 6 highlight
+     `.feat` cards clickable to them.
+   - **Best time:** make the 3 `.season` cards clickable to a "best time to visit <country>" article.
+   - Needs new verified imagery per page (`tools/fetch_commons.py` → eyeball each → `tools/finalize_commons.py`).
+2. Upgrade the OTHER 5 Kenya itineraries to the **full** `classic-kenya-safari.html` template
+   (day photos, Camps & Lodges, rates table, what's-included). Only classic-kenya-safari has it today.
 3. Point the homepage **"Explore all trips"** button somewhere real (currently `mailto:`), or build a trips index.
 4. Wire the **contact form** to a backend (Formspree / Netlify Forms) — it's a front-end demo today.
 5. Replace placeholder contact details: `hello@rendiletravels.com`, `+254 700 000 000`, `wa.me/254700000000`.
