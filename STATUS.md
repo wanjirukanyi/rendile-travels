@@ -15,6 +15,10 @@ A static, no-framework marketing site for a women's luxury East Africa travel br
 ## Backup & recovery (off-machine — set up 2026-06-22)
 - **GitHub (private):** https://github.com/wanjirukanyi/rendile-travels — the off-machine source of record.
   **Save your work after editing:** `git add -A && git commit -m "…" && git push`.
+- **One-command backup:** `sh tools/autosave.sh` — commits + pushes, but only if something changed.
+- **Auto-backup on session end (optional):** add a `SessionEnd` hook to `.claude/settings.local.json`
+  calling `tools/autosave.sh` (Claude is blocked from self-installing it — paste it by hand):
+  `"hooks": {"SessionEnd": [{"hooks": [{"type": "command", "command": "sh /Users/maureenkanyi/Documents/oaks/rendile-travels/tools/autosave.sh", "timeout": 30}]}]}`
 - **iCloud:** dated full-source zips in `~/Library/Mobile Documents/.../Rendile Travels Backups/`.
 - **Recover on a new machine:** `git clone https://github.com/wanjirukanyi/rendile-travels.git`
   (or unzip the iCloud backup). Then `sh tools/sync-preview.sh` + preview as above.
