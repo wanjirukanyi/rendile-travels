@@ -31,7 +31,10 @@ A static, no-framework marketing site for a women's luxury East Africa travel br
   women-only-kenya, mummy-and-me-safari, lamu-yoga-festival
 - **Zanzibar trip:** zanzibar-womens-retreat
 - **SEO articles (7):** maasai-mara, amboseli, lake-nakuru, samburu, lamu-coast, nairobi, best-time-kenya
-- **Other:** contact, custom-safaris
+- **Other:** contact, custom-safaris, about, faq, packing-list, journal (the Blog)
+- **Footer:** all Company/Resources links now lead to real pages sitewide (Our story/community→about,
+  FAQs→faq, Packing lists→packing-list, Blog→journal, Experiences→custom-safaris; Careers/Gift cards/Contact→contact).
+  **Social links (Instagram/Facebook) still placeholders** — user is sending the real URLs.
 
 ## Done recently (this session)
 - Built the Tanzania / Uganda / Rwanda rich destination pages with verified imagery.
