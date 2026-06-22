@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rendile Travels — Curated Journeys for Women in East Africa</title>
+  <meta name="description" content="Curated travel experiences for women exploring East Africa. Intimate, beautifully designed journeys across Kenya, Tanzania, Rwanda, Uganda and Zanzibar — by women, for women." />
+  <meta property="og:title" content="Rendile Travels — Where Every Path Tells a Story" />
+  <meta property="og:description" content="Curated travel experiences for women exploring East Africa. Intimate journeys, designed by women, for women." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/logo-orange.png" />
+  <link rel="icon" type="image/png" href="assets/logo-orange.png" />
+  <link rel="apple-touch-icon" href="assets/logo-orange.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Announcement bar -->
+  <div class="announce" id="top">
+    <div class="container announce__inner">
+      <span class="announce__dot"></span>
+      Now booking our 2026 women-only departures — intimate groups of 8–12
+      <a href="mailto:hello@rendiletravels.com" class="announce__link">Reserve your place →</a>
+    </div>
+  </div>
+
+  <!-- Header / nav -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#top" class="brand" aria-label="Rendile Travels home">
+        <span class="brand__seal" aria-hidden="true">
+          <img src="assets/logo-mark.png" alt="" onerror="this.style.display='none'" />
+        </span>
+        <span class="brand__name">RENDILE TRAVELS</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Primary">
+        <a href="#destinations">Destinations</a>
+        <a href="#journeys">Signature trips</a>
+        <a href="#difference">Why Us</a>
+        <a href="#reviews">Reviews</a>
+        <a href="contact.html" class="nav__cta">Contact Us</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero__media" style="background-image:url('assets/img/hero-women.jpg')">
+      <video class="hero__vid" id="heroVidA" muted playsinline preload="auto" aria-hidden="true"></video>
+      <video class="hero__vid" id="heroVidB" muted playsinline preload="none" aria-hidden="true"></video>
+    </div>
+    <div class="hero__scrim"></div>
+    <div class="container hero__content">
+      <p class="eyebrow eyebrow--light reveal">Women's luxury travel · East Africa</p>
+      <h1 class="hero__title reveal">Where Every Path<br/>Tells a Story</h1>
+      <p class="hero__lead reveal">We curate extraordinary journeys for women exploring East Africa.</p>
+      <div class="hero__actions reveal">
+        <a href="#destinations" class="btn btn--gold">Explore East Africa</a>
+        <a href="#journeys" class="btn btn--ghost">Signature trips</a>
+        <a href="custom-safaris.html" class="btn btn--ghost">Custom Safaris</a>
+      </div>
+      <ul class="hero__trust reveal">
+        <li>Intimate groups of 8–12</li>
+        <li>Designed by women, for women</li>
+        <li>Hand-picked stays</li>
+        <li>On-trip concierge</li>
+      </ul>
+    </div>
+    <a href="#destinations" class="hero__scroll" aria-label="Scroll to explore">
+      <span class="hero__scroll-text">Scroll to explore</span>
+      <span class="hero__scroll-dot"></span>
+    </a>
+  </section>
+
+  <!-- Destinations -->
+  <section class="section section--cream destinations" id="destinations">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="eyebrow">Destinations</p>
+        <h2 class="section__title">Explore East Africa</h2>
+      </div>
+
+      <div class="dest__grid">
+        <a class="dest reveal" href="kenya.html" style="--img:url('assets/img/kenya.jpg')">
+          <div class="dest__body">
+            <h3>Kenya</h3>
+            <p>The birthplace of safari</p>
+          </div>
+        </a>
+        <a class="dest reveal" href="tanzania.html" style="--img:url('assets/img/tanzania.jpg')">
+          <div class="dest__body">
+            <h3>Tanzania</h3>
+            <p>Serengeti &amp; the Maasai</p>
+          </div>
+        </a>
+        <a class="dest reveal" href="uganda.html" style="--img:url('assets/img/uganda.jpg')">
+          <div class="dest__body">
+            <h3>Uganda</h3>
+            <p>Tree-climbing lions</p>
+          </div>
+        </a>
+        <a class="dest reveal" href="rwanda.html" style="--img:url('assets/img/rwanda.jpg')">
+          <div class="dest__body">
+            <h3>Rwanda</h3>
+            <p>The land of a thousand hills</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Upcoming Journeys -->
+  <section class="section section--cream journeys" id="journeys">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="eyebrow">Upcoming journeys</p>
+        <h2 class="section__title">Signature Trips</h2>
+        <p class="section__intro">Small-group departures. Reserve your spot.</p>
+      </div>
+
+      <div class="journeys__grid">
+        <article class="journey reveal">
+          <div class="journey__media" style="background-image:url('assets/img/trip-family.jpg')">
+            <span class="journey__tag">Kenya · Family</span>
+          </div>
+          <div class="journey__body">
+            <h3>Mummy and Me Safari</h3>
+            <p class="journey__meta">5 days · Mothers &amp; children</p>
+            <p>A carefully crafted family adventure where mothers and children bond over wildlife encounters, bush walks, and starlit stories.</p>
+            <div class="journey__foot">
+              <span class="journey__price">from <strong>$4,900</strong> <em>/ person</em></span>
+              <a href="mummy-and-me-safari.html" class="link-arrow">Learn more →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="journey reveal">
+          <div class="journey__media" style="background-image:url('assets/img/trip-lamu.jpg')">
+            <span class="journey__tag">Lamu, Kenya · Wellness</span>
+          </div>
+          <div class="journey__body">
+            <h3>Lamu Yoga Festival</h3>
+            <p class="journey__meta">5 days · Women &amp; men · adults only</p>
+            <p>Join Kenya's beloved Lamu Yoga &amp; Wellbeing Festival on the Swahili coast — five days of beachfront yoga, meditation and workshops, with dhow cruises, mangrove swims and Swahili feasts across the islands of Lamu and Manda.</p>
+            <div class="journey__foot">
+              <span class="journey__price">from <strong>$5,600</strong> <em>/ person</em></span>
+              <a href="lamu-yoga-festival.html" class="link-arrow">Learn more →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="journey reveal">
+          <div class="journey__media" style="background-image:url('assets/img/trip-zanzibar.jpg')">
+            <span class="journey__tag">Zanzibar · Women-only</span>
+          </div>
+          <div class="journey__body">
+            <h3>Zanzibar Women's Retreat</h3>
+            <p class="journey__meta">7 days · Women-only</p>
+            <p>A week of sun, spice, and sisterhood on Zanzibar's pristine beaches. Daily yoga, cooking classes, and sunset dhow cruises.</p>
+            <div class="journey__foot">
+              <span class="journey__price">from <strong>$6,200</strong> <em>/ person</em></span>
+              <a href="zanzibar-womens-retreat.html" class="link-arrow">Learn more →</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="journeys__cta reveal">
+        <a href="mailto:hello@rendiletravels.com" class="btn btn--gold">Explore all trips</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Rendile Difference -->
+  <section class="section pillars" id="difference">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="eyebrow">Why travel with us</p>
+        <h2 class="section__title">The Rendile Difference</h2>
+        <p class="section__intro">Journeys designed by women, for women. Every detail considered, every path a story worth telling.</p>
+      </div>
+
+      <div class="pillars__grid">
+        <article class="pillar reveal">
+          <span class="pillar__num">01</span>
+          <h3>Curated Itineraries</h3>
+          <p>No cookie-cutter trips. Each experience is uniquely crafted around you — your pace, your passions, your comfort.</p>
+        </article>
+        <article class="pillar reveal">
+          <span class="pillar__num">02</span>
+          <h3>Authentic Connections</h3>
+          <p>Meet local women, artisans, and change-makers along the way. Travel that opens doors, not just itineraries.</p>
+        </article>
+        <article class="pillar reveal">
+          <span class="pillar__num">03</span>
+          <h3>Intimate by Design</h3>
+          <p>Small groups of 8–12, or fully private. Real connections, not crowds — and safety woven through every day.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stories from the Road -->
+  <section class="section reviews" id="reviews">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="eyebrow">Stories from the road</p>
+        <h2 class="section__title">Loved by the women who travel with us.</h2>
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★ <span>5.0 · from every traveller, so far</span></div>
+      </div>
+
+      <div class="reviews__track" id="reviewsTrack">
+        <figure class="review is-active">
+          <blockquote>"I travelled solo for the first time at 54 and never once felt alone or unsafe. Every stay, every guide, every sunrise was thought through. I came home a different woman."</blockquote>
+          <figcaption><strong>Wanjiru K.</strong><span>Nairobi → Maasai Mara &amp; Serengeti</span></figcaption>
+        </figure>
+        <figure class="review">
+          <blockquote>"The women-only departure was the trip of my life. Twelve strangers on day one, friends for life by day seven. Rendile handled everything — I just had to show up and feel."</blockquote>
+          <figcaption><strong>Amara O.</strong><span>London → Rwanda &amp; Uganda</span></figcaption>
+        </figure>
+        <figure class="review">
+          <blockquote>"The Zanzibar retreat was sun, spice and sisterhood, exactly as promised. Not a single detail dropped — just space to breathe and women who get it."</blockquote>
+          <figcaption><strong>Diana M.</strong><span>New York → Zanzibar Women's Retreat</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="reviews__dots" id="reviewsDots" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <div class="container newsletter__inner reveal">
+      <div>
+        <h3>Travel notes for women, now and then</h3>
+        <p>Curated travel experiences for women exploring East Africa — departure dates, secret stays and quiet inspiration. Never spam.</p>
+      </div>
+      <form class="newsletter__form" id="newsletterForm">
+        <input type="email" placeholder="Enter your email" aria-label="Email address" required />
+        <button class="btn btn--dark" type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="assets/logo-dark.png" alt="Rendile Travels" class="footer__logo" onerror="this.style.display='none';var w=document.getElementById('footerWordmark');if(w)w.style.display='block';" />
+        <span class="brand__name" id="footerWordmark" style="display:none">RENDILE</span>
+        <p>Curated travel experiences for women exploring East Africa.</p>
+        <div class="footer__social">
+          <a href="https://instagram.com" aria-label="Instagram">Instagram</a>
+          <a href="https://facebook.com" aria-label="Facebook">Facebook</a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Explore</h4>
+        <a href="#destinations">Destinations</a>
+        <a href="#journeys">Trips</a>
+        <a href="#difference">Experiences</a>
+        <a href="#reviews">Stories</a>
+      </div>
+      <div class="footer__col">
+        <h4>Company</h4>
+        <a href="#difference">Our story</a>
+        <a href="#difference">Our community</a>
+        <a href="mailto:hello@rendiletravels.com">Careers</a>
+        <a href="mailto:hello@rendiletravels.com">Contact</a>
+      </div>
+      <div class="footer__col">
+        <h4>Resources</h4>
+        <a href="mailto:hello@rendiletravels.com">FAQs</a>
+        <a href="mailto:hello@rendiletravels.com">Packing lists</a>
+        <a href="mailto:hello@rendiletravels.com">Gift cards</a>
+        <a href="mailto:hello@rendiletravels.com">Blog</a>
+      </div>
+    </div>
+    <div class="container footer__bar">
+      <span>© <span id="year"></span> Rendile Travels. All rights reserved.</span>
+      <span class="footer__made">Crafted with care in East Africa.</span>
+    </div>
+    <div class="container footer__credit">
+      Imagery &amp; film via Wikimedia Commons: balloon © Svein-Magne Tunli; Maasai woman © Ondřej Havelka; tree-climbing lion © Fanny Schertzer; mountain gorilla © Charles J. Sharp; hero film “Maasai people singing and dancing” © Bigvai Muhoti. Licensed under <a href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="license noopener">CC BY</a> / <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="license noopener">CC BY-SA</a>.
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

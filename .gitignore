@@ -1,0 +1,7 @@
+# Build artifact — regenerate with tools/build-deploy.sh
+rendile-travels-site.zip
+
+# macOS junk
+.DS_Store
+**/.DS_Store
+__MACOSX/

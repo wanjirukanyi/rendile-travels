@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Plan Your Journey | Rendile Travels</title>
+  <meta name="description" content="Get in touch with Rendile Travels to plan your women's luxury journey through East Africa. Share a few details and your personal travel designer will reply within one business day." />
+  <meta property="og:title" content="Contact — Rendile Travels" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/logo-orange.png" />
+  <link rel="icon" type="image/png" href="assets/logo-orange.png" />
+  <link rel="apple-touch-icon" href="assets/logo-orange.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Announcement bar -->
+  <div class="announce" id="top">
+    <div class="container announce__inner">
+      <span class="announce__dot"></span>
+      Now booking our 2026 women-only departures — intimate groups of 8–12
+      <a href="#contactform" class="announce__link">Reserve your place →</a>
+    </div>
+  </div>
+
+  <!-- Header / nav -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="brand" aria-label="Rendile Travels home">
+        <span class="brand__seal" aria-hidden="true">
+          <img src="assets/logo-mark.png" alt="" onerror="this.style.display='none'" />
+        </span>
+        <span class="brand__name">RENDILE TRAVELS</span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Primary">
+        <a href="index.html#destinations">Destinations</a>
+        <a href="index.html#journeys">Signature trips</a>
+        <a href="index.html#difference">Why Us</a>
+        <a href="index.html#reviews">Reviews</a>
+        <a href="contact.html" class="nav__cta">Contact Us</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Contact -->
+  <section class="section inquiry" id="contactform">
+    <div class="container inquiry__inner">
+      <div class="inquiry__intro reveal">
+        <p class="eyebrow">Get in touch</p>
+        <h1 class="section__title">Let's plan your journey.</h1>
+        <p>Share a few details and your personal travel designer will be in touch within one business day — no pressure, no obligation, just the start of something wonderful.</p>
+        <ul class="inquiry__contacts">
+          <li><span>Email</span><a href="mailto:hello@rendiletravels.com">hello@rendiletravels.com</a></li>
+          <li><span>WhatsApp / Phone</span><a href="https://wa.me/254700000000">+254 700 000 000</a></li>
+          <li><span>Based in</span>Nairobi, Kenya · serving travellers worldwide</li>
+          <li><span>Hours</span>Mon–Sat, 9am–6pm EAT</li>
+        </ul>
+      </div>
+
+      <form class="inquiry__form reveal" id="inquiryForm" novalidate>
+        <div class="field">
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name" required placeholder="Jane Doe" />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required placeholder="jane@example.com" />
+        </div>
+        <div class="field">
+          <label for="trip">Trip of interest</label>
+          <input type="text" id="trip" name="trip" placeholder="e.g. Classic Kenya Safari" />
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="when">When would you like to travel?</label>
+            <input type="text" id="when" name="when" placeholder="e.g. Aug 2026, or flexible" />
+          </div>
+          <div class="field">
+            <label for="party">Who's travelling?</label>
+            <select id="party" name="party">
+              <option value="">Select…</option>
+              <option>Just me (solo)</option>
+              <option>Me + partner</option>
+              <option>Group of friends</option>
+              <option>Mum &amp; child(ren)</option>
+              <option>Women-only departure</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label>Which trip or experience? <span class="field__hint">(pick any)</span></label>
+          <div class="chips">
+            <label class="chip"><input type="checkbox" name="interest" value="Mummy and Me Safari" /> Mummy &amp; Me</label>
+            <label class="chip"><input type="checkbox" name="interest" value="Lamu Yoga Festival" /> Lamu Yoga</label>
+            <label class="chip"><input type="checkbox" name="interest" value="Zanzibar Retreat" /> Zanzibar Retreat</label>
+            <label class="chip"><input type="checkbox" name="interest" value="Safari" /> Classic Safari</label>
+            <label class="chip"><input type="checkbox" name="interest" value="Gorillas" /> Gorillas</label>
+            <label class="chip"><input type="checkbox" name="interest" value="Tailor-made" /> Tailor-made</label>
+          </div>
+        </div>
+        <div class="field">
+          <label for="message">Tell us a little more</label>
+          <textarea id="message" name="message" rows="4" placeholder="Your dream trip, must-sees, budget range, anything at all…"></textarea>
+        </div>
+        <button type="submit" class="btn btn--gold btn--block">Send my enquiry</button>
+        <p class="inquiry__note" id="formNote" hidden></p>
+        <p class="inquiry__fineprint">By submitting, you agree we may contact you about your trip. We never share your details.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="assets/logo-dark.png" alt="Rendile Travels" class="footer__logo" onerror="this.style.display='none';var w=document.getElementById('footerWordmark');if(w)w.style.display='block';" />
+        <span class="brand__name" id="footerWordmark" style="display:none">RENDILE</span>
+        <p>Curated travel experiences for women exploring East Africa.</p>
+        <div class="footer__social">
+          <a href="https://instagram.com" aria-label="Instagram">Instagram</a>
+          <a href="https://facebook.com" aria-label="Facebook">Facebook</a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Explore</h4>
+        <a href="index.html#destinations">Destinations</a>
+        <a href="index.html#journeys">Trips</a>
+        <a href="index.html#difference">Experiences</a>
+        <a href="index.html#reviews">Stories</a>
+      </div>
+      <div class="footer__col">
+        <h4>Company</h4>
+        <a href="index.html#difference">Our story</a>
+        <a href="index.html#difference">Our community</a>
+        <a href="contact.html">Careers</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer__col">
+        <h4>Resources</h4>
+        <a href="contact.html">FAQs</a>
+        <a href="contact.html">Packing lists</a>
+        <a href="contact.html">Gift cards</a>
+        <a href="contact.html">Blog</a>
+      </div>
+    </div>
+    <div class="container footer__bar">
+      <span>© <span id="year"></span> Rendile Travels. All rights reserved.</span>
+      <span class="footer__made">Crafted with care in East Africa.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
