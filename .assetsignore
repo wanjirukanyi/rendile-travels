@@ -1,0 +1,8 @@
+# Files NOT to publish as part of the live site (same syntax as .gitignore).
+tools/
+*.md
+*.zip
+wrangler.jsonc
+.assetsignore
+.gitignore
+.git/

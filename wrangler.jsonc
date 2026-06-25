@@ -1,0 +1,11 @@
+{
+  // Cloudflare Worker config for the Rendile Travels static site.
+  // No server-side code — this is an "assets-only" Worker that just serves
+  // the HTML/CSS/JS/images in this repo. Deployed via `npx wrangler deploy`.
+  "name": "rendile-travels",
+  "compatibility_date": "2025-06-25",
+  "assets": {
+    // Site files live at the repo root (no build step).
+    "directory": "."
+  }
+}
