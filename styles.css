@@ -158,12 +158,12 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:500;line-height:1.1;letter-spac
 
 /* ---------- Destinations ---------- */
 .dest__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.6rem}
-.dest{position:relative;aspect-ratio:3/4.4;border-radius:16px;overflow:hidden;display:flex;align-items:flex-end;isolation:isolate}
-.dest::before{content:"";position:absolute;inset:0;background-image:var(--img);background-size:cover;background-position:center;transition:transform .9s ease;z-index:-2}
-.dest::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(15,12,10,.85) 0%,rgba(15,12,10,.3) 38%,rgba(15,12,10,0) 62%);z-index:-1}
+.dest{position:relative;aspect-ratio:3/4.4;border-radius:16px;overflow:hidden;display:flex;align-items:flex-end;background-image:var(--img);background-size:cover;background-position:center;background-repeat:no-repeat}
+.dest::before{content:"";position:absolute;inset:0;background-image:inherit;background-size:cover;background-position:center;transition:transform .9s ease;z-index:0}
+.dest::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(15,12,10,.85) 0%,rgba(15,12,10,.3) 38%,rgba(15,12,10,0) 62%);z-index:1}
 .dest:hover::before{transform:scale(1.07)}
 .dest--wide{grid-column:span 2}
-.dest__body{padding:1.8rem;color:#fff}
+.dest__body{position:relative;z-index:2;padding:1.8rem;color:#fff}
 .dest__body h3{font-size:1.7rem;font-weight:500}
 .dest__body p{font-size:.9rem;color:rgba(255,255,255,.85);margin-top:.2rem}
 .dest--soon{background:var(--ivory);border:1px dashed var(--line);align-items:center;text-align:center}

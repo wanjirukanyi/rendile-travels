@@ -94,9 +94,23 @@
         showNote('Please add your name and a valid email so we can reach you.', false);
         return;
       }
-      // No backend yet — this is where you'd POST to your email service / CRM.
-      showNote('Thank you, ' + name.value.trim().split(' ')[0] + '! Your travel designer will be in touch within one business day.', true);
-      form.reset();
+      var firstName = name.value.trim().split(' ')[0];
+      var submitBtn = form.querySelector('button[type=submit]');
+      if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Sending…'; }
+      // Submit to Netlify Forms (notifies bookings@rendiletravels.com).
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(form)).toString()
+      }).then(function (r) {
+        if (!r.ok) throw new Error('bad status');
+        showNote('Thank you, ' + firstName + '! Your travel designer will be in touch within one business day.', true);
+        form.reset();
+      }).catch(function () {
+        showNote('Sorry — something went wrong. Please email us directly at bookings@rendiletravels.com.', false);
+      }).finally(function () {
+        if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Send my enquiry'; }
+      });
     });
   }
   function showNote(msg, ok) {
