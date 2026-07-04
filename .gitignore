@@ -5,3 +5,8 @@ rendile-travels-site.zip
 .DS_Store
 **/.DS_Store
 __MACOSX/
+
+# Astro / Node
+node_modules/
+dist/
+.astro/

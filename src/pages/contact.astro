@@ -1,0 +1,84 @@
+---
+import Base from '../layouts/BaseLayout.astro';
+---
+<Base
+  title={`Contact — Plan Your Journey | Rendile Travels`}
+  description={`Get in touch with Rendile Travels to plan your women's luxury journey through East Africa. Share a few details and your personal travel designer will reply within one business day.`}
+  ogTitle={`Contact — Rendile Travels`}
+  ogType={`website`}
+  ogImage={`assets/logo-orange.png`}
+  announce
+>
+
+<!-- Contact -->
+  <section class="section inquiry" id="contactform">
+    <div class="container inquiry__inner">
+      <div class="inquiry__intro reveal">
+        <p class="eyebrow">Get in touch</p>
+        <h1 class="section__title">Let's plan your journey.</h1>
+        <p>Share a few details and your personal travel designer will be in touch within one business day — no pressure, no obligation, just the start of something wonderful.</p>
+        <ul class="inquiry__contacts">
+          <li><span>Email</span><a href="mailto:hello@rendiletravels.com">hello@rendiletravels.com</a></li>
+          <li><span>WhatsApp / Phone</span><a href="https://wa.me/254700000000">+254 700 000 000</a></li>
+          <li><span>Based in</span>Nairobi, Kenya · serving travellers worldwide</li>
+          <li><span>Hours</span>Mon–Sat, 9am–6pm EAT</li>
+        </ul>
+      </div>
+
+      <form class="inquiry__form reveal" id="inquiryForm" name="inquiry" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" novalidate>
+        <input type="hidden" name="form-name" value="inquiry" />
+        <p hidden><label>Leave this empty: <input name="bot-field" /></label></p>
+        <div class="field">
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name" required placeholder="Jane Doe" />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required placeholder="jane@example.com" />
+        </div>
+        <div class="field">
+          <label for="trip">Trip of interest</label>
+          <input type="text" id="trip" name="trip" placeholder="e.g. Classic Kenya Safari" />
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="when">When would you like to travel?</label>
+            <input type="text" id="when" name="when" placeholder="e.g. Aug 2026, or flexible" />
+          </div>
+          <div class="field">
+            <label for="party">Who's travelling?</label>
+            <select id="party" name="party">
+              <option value="">Select…</option>
+              <option>Just me (solo)</option>
+              <option>Me + partner</option>
+              <option>Group of friends</option>
+              <option>Mum &amp; child(ren)</option>
+              <option>Women-only departure</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label>Which trip or experience? <span class="field__hint">(pick any)</span></label>
+          <div class="chips">
+            <label class="chip"><input type="checkbox" name="interest" value="Mummy and Me Safari" /> Mummy &amp; Me</label>
+            <label class="chip"><input type="checkbox" name="interest" value="Lamu Yoga Festival" /> Lamu Yoga</label>
+            <label class="chip"><input type="checkbox" name="interest" value="Zanzibar Retreat" /> Zanzibar Retreat</label>
+            <label class="chip"><input type="checkbox" name="interest" value="Safari" /> Classic Safari</label>
+            <label class="chip"><input type="checkbox" name="interest" value="Gorillas" /> Gorillas</label>
+            <label class="chip"><input type="checkbox" name="interest" value="Tailor-made" /> Tailor-made</label>
+          </div>
+        </div>
+        <div class="field">
+          <label for="message">Tell us a little more</label>
+          <textarea id="message" name="message" rows="4" placeholder="Your dream trip, must-sees, budget range, anything at all…"></textarea>
+        </div>
+        <button type="submit" class="btn btn--gold btn--block">Send my enquiry</button>
+        <p class="inquiry__note" id="formNote" hidden></p>
+        <p class="inquiry__fineprint">By submitting, you agree we may contact you about your trip. We never share your details.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+
+</Base>

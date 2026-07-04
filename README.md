@@ -1,47 +1,49 @@
 # Rendile Travels — website
 
-Luxury East African journeys, designed for women. A fast, self-contained marketing
-site (no build step, no framework) — just open it or drop it on any host.
+Luxury East African journeys, designed for women. An [Astro](https://astro.build)
+static site: pages share one layout, and Astro compiles everything to plain static
+HTML (no server, no client framework) for fast, host-anywhere deployment.
 
-## Files
-- `index.html` — the whole single-page site (hero, pillars, destinations, ways to
-  travel, signature journeys, the Rendile Way, story, reviews, FAQ, inquiry form,
-  newsletter, footer).
-- `styles.css` — all styling and responsive layout.
-- `script.js` — sticky header, mobile menu, scroll reveals, testimonial slider,
-  and front-end form handling.
+> **Migrated from hand-written HTML → Astro.** The 73 original `.html` files are kept
+> in `_legacy-html/` as a reference/rollback safety net (not part of the build). Once
+> you're happy with the Astro site, that folder can be deleted.
 
-## Preview locally
-Open `index.html` in a browser, or serve the folder:
+## Project structure
+- `src/layouts/BaseLayout.astro` — the **shared chrome**: `<head>`/meta, announcement
+  bar, header + nav, footer, and the `script.js` include. **Edit the nav or footer here
+  once and every page updates.**
+- `src/pages/*.astro` — one file per page (`kenya.astro` → `/kenya.html`). Each holds
+  only that page's unique body and passes its SEO/meta (title, description, OG, canonical,
+  keywords, JSON-LD) and footer image-credit to `BaseLayout` as props.
+- `public/` — served verbatim at the site root: `styles.css`, `script.js`, `assets/`
+  (images/video/logos), `CNAME`.
+- `astro.config.mjs` — uses `build.format: 'file'` so output is `kenya.html` at the root,
+  preserving every existing relative link and live URL.
+
+## Develop & build
 ```bash
 cd rendile-travels
-python3 -m http.server 8000   # then visit http://localhost:8000
+npm install          # first time only
+npm run dev          # live-reload dev server (http://localhost:4321)
+npm run build        # compile src/ -> dist/ (the deployable static site)
+npm run preview      # serve the built dist/ exactly as it'll ship
 ```
+Requires Node (installed via Homebrew: `brew install node`).
 
-## Publishing
-This is plain HTML/CSS/JS, so it works anywhere:
-- **Netlify / Vercel / Cloudflare Pages** — drag-and-drop the folder, or connect a repo.
-- **GitHub Pages** — push the folder and enable Pages.
-- **Your existing GoDaddy hosting** — upload the three files via the file manager.
-
-To use the domain **rendiletravels.com**, point its DNS at whichever host you choose.
-
-### Building the deploy zip
-Always build the upload artifact with the script — it bakes in the exclusions so internal
-files never ship:
+## Publishing (Cloudflare)
+The site deploys as a Cloudflare assets-only Worker serving `dist/` (see `wrangler.jsonc`):
 ```bash
-sh tools/build-deploy.sh   # → rendile-travels-site.zip (drag into Cloudflare Pages)
+npm run build
+npx wrangler deploy
 ```
-Excluded from the zip: `tools/` (helper scripts), `README.md`, `STATUS.md`,
-`assets/Layer 1 (2).png` (hi-res logo source), `*.DS_Store`, and the zip itself.
+Cloudflare Pages can also build it natively — set **build command** `npm run build` and
+**output directory** `dist`. To use **rendiletravels.com**, point its DNS at Cloudflare.
 
 ## Local tooling (`tools/`, not deployed)
-- `build-deploy.sh` — builds the deploy zip (above).
-- `sync-preview.sh` — rsyncs the site into `~/.rendile-preview`, the persistent copy the
-  sandboxed preview server reads (it cannot read `~/Documents`). Run after edits, then refresh
-  `http://localhost:4321/`.
 - `fetch_commons.py` / `finalize_commons.py` — stage & download verified Wikimedia Commons
   imagery (search → visually verify → download → `sips` resize).
+- `build-deploy.sh` / `sync-preview.sh` — **legacy** helpers from the static-HTML era;
+  superseded by `npm run build` + `npx wrangler deploy` above.
 
 ## Making it real (next steps)
 1. **Inquiry form** — currently shows a thank-you on the page but does not send

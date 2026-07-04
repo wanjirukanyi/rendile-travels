@@ -1,0 +1,125 @@
+---
+// Shared site chrome for every Rendile Travels page.
+// Edit the header, nav, footer or announcement bar HERE and every page updates.
+//
+// Per-page values come in as props:
+//   title, description, ogTitle, ogDescription, ogType, ogImage  -> <head> meta
+//   canonical, keywords                                          -> optional meta
+//   jsonld   -> raw JSON-LD string rendered into <head> (structured data)
+//   credit   -> raw HTML image-attribution line for the footer (optional)
+//   announce -> show the booking announcement bar (default: false)
+const {
+  title,
+  description = 'Curated travel experiences for women exploring East Africa.',
+  ogTitle,
+  ogDescription,
+  ogType = 'website',
+  ogImage = 'assets/logo-orange.png',
+  canonical,
+  keywords,
+  jsonld,
+  credit,
+  announce = false,
+} = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  {keywords && <meta name="keywords" content={keywords} />}
+  <meta property="og:title" content={ogTitle ?? title} />
+  <meta property="og:description" content={ogDescription ?? description} />
+  <meta property="og:type" content={ogType} />
+  <meta property="og:image" content={ogImage} />
+  {canonical && <link rel="canonical" href={canonical} />}
+  <link rel="icon" type="image/png" href="/assets/logo-orange.png" />
+  <link rel="apple-touch-icon" href="/assets/logo-orange.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  {jsonld && <script type="application/ld+json" is:inline set:html={jsonld} />}
+</head>
+<body>
+
+  {announce && (
+    <div class="announce" id="top">
+      <div class="container announce__inner">
+        <span class="announce__dot"></span>
+        Now booking our 2026 women-only departures — intimate groups of 8–12
+        <a href="contact.html" class="announce__link">Reserve your place →</a>
+      </div>
+    </div>
+  )}
+
+  <!-- Header / nav -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="brand" aria-label="Rendile Travels home">
+        <span class="brand__seal" aria-hidden="true">
+          <img src="/assets/logo-mark.png" alt="" onerror="this.style.display='none'" />
+        </span>
+        <span class="brand__name">RENDILE TRAVELS</span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Primary">
+        <a href="index.html#destinations">Destinations</a>
+        <a href="index.html#journeys">Signature trips</a>
+        <a href="index.html#difference">Why Us</a>
+        <a href="index.html#reviews">Reviews</a>
+        <a href="contact.html" class="nav__cta">Contact Us</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <slot />
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="/assets/logo-dark.png" alt="Rendile Travels" class="footer__logo" onerror="this.style.display='none';var w=document.getElementById('footerWordmark');if(w)w.style.display='block';" />
+        <span class="brand__name" id="footerWordmark" style="display:none">RENDILE</span>
+        <p>Curated travel experiences for women exploring East Africa.</p>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/rendiletravels/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=61589890400082" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Explore</h4>
+        <a href="index.html#destinations">Destinations</a>
+        <a href="index.html#journeys">Trips</a>
+        <a href="custom-safaris.html">Experiences</a>
+        <a href="index.html#reviews">Stories</a>
+      </div>
+      <div class="footer__col">
+        <h4>Company</h4>
+        <a href="about.html">Our story</a>
+        <a href="about.html#community">Our community</a>
+        <a href="contact.html">Careers</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer__col">
+        <h4>Resources</h4>
+        <a href="faq.html">FAQs</a>
+        <a href="packing-list.html">Packing lists</a>
+        <a href="contact.html">Gift cards</a>
+        <a href="journal.html">Blog</a>
+      </div>
+    </div>
+    <div class="container footer__bar">
+      <span>© <span id="year"></span> Rendile Travels. All rights reserved.</span>
+      <span class="footer__made">Crafted with care in East Africa.</span>
+    </div>
+    {credit && <div class="container footer__credit" set:html={credit} />}
+  </footer>
+
+  <script is:inline src="/script.js"></script>
+</body>
+</html>

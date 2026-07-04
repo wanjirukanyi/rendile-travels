@@ -1,11 +1,14 @@
 {
-  // Cloudflare Worker config for the Rendile Travels static site.
-  // No server-side code — this is an "assets-only" Worker that just serves
-  // the HTML/CSS/JS/images in this repo. Deployed via `npx wrangler deploy`.
+  // Cloudflare Worker config for the Rendile Travels site.
+  // No server-side code — this is an "assets-only" Worker that serves the
+  // static HTML/CSS/JS/images Astro produces.
+  //
+  // Deploy flow:  npm run build   (compiles src/ -> dist/)
+  //               npx wrangler deploy   (publishes dist/)
   "name": "rendile-travels",
   "compatibility_date": "2025-06-25",
   "assets": {
-    // Site files live at the repo root (no build step).
-    "directory": "."
+    // Astro's build output. Run `npm run build` first.
+    "directory": "./dist"
   }
 }
