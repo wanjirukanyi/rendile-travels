@@ -141,9 +141,9 @@
   if (!a || !b) return;
 
   // Women's wellness-retreat montage (self-hosted Pexels clips, free to use, no credit needed):
-  // running into the sea -> yoga at sunset -> safari drive -> elephant -> friends at dusk
+  // friends walking the beach -> yoga at sunset -> safari drive -> elephant -> friends at dusk
   var clips = [
-    'assets/videos/hero-1-sea.mp4',
+    'assets/videos/hero-1-beach.mp4',
     'assets/videos/hero-2-yoga.mp4',
     'assets/videos/hero-3-safari.mp4',
     'assets/videos/hero-4-elephant.mp4',
