@@ -141,15 +141,13 @@
   if (!a || !b) return;
 
   // Women's wellness-retreat montage (self-hosted Pexels clips, free to use, no credit needed):
-  // beach yoga -> safari drive -> spa -> group meditation -> elephant -> running into the sea -> friends at dusk
+  // running into the sea -> yoga at sunset -> safari drive -> elephant -> friends at dusk
   var clips = [
-    'assets/videos/wellness-1-beach-yoga.mp4',
-    'assets/videos/wellness-2-safari.mp4',
-    'assets/videos/wellness-3-spa.mp4',
-    'assets/videos/wellness-4-meditation.mp4',
-    'assets/videos/wellness-5-elephant.mp4',
-    'assets/videos/wellness-6-sea.mp4',
-    'assets/videos/wellness-7-friends.mp4'
+    'assets/videos/hero-1-sea.mp4',
+    'assets/videos/hero-2-yoga.mp4',
+    'assets/videos/hero-3-safari.mp4',
+    'assets/videos/hero-4-elephant.mp4',
+    'assets/videos/hero-5-friends.mp4'
   ];
 
   // Respect reduced-motion, data-saver, and small screens (keep the poster image instead).
