@@ -2,13 +2,13 @@
 import Base from '../layouts/BaseLayout.astro';
 ---
 <Base
-  title={`Rendile Travels — Curated Journeys for Women in East Africa`}
-  description={`Curated travel experiences for women exploring East Africa. Intimate, beautifully designed journeys across Kenya, Tanzania, Rwanda, Uganda and Zanzibar — by women, for women.`}
+  title={`Rendile Travels — Luxury Women's Retreats in Africa, Asia, Europe & the Middle East`}
+  description={`Luxury retreats for women: one themed retreat a month for just ten women, across Africa, Asia, Europe and the Middle East & North Africa. Or host your own.`}
   ogTitle={`Rendile Travels — Where Every Path Tells a Story`}
-  ogDescription={`Curated travel experiences for women exploring East Africa. Intimate journeys, designed by women, for women.`}
+  ogDescription={`One themed retreat a month, ten women each. Africa, Asia, Europe and the Middle East & North Africa, designed by women, for women.`}
   ogType={`website`}
   ogImage={`assets/logo-orange.png`}
-  credit={`Imagery &amp; film via Wikimedia Commons: balloon © Svein-Magne Tunli; Maasai woman © Ondřej Havelka; tree-climbing lion © Fanny Schertzer; mountain gorilla © Charles J. Sharp; hero film “Maasai people singing and dancing” © Bigvai Muhoti. Licensed under <a href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="license noopener">CC BY</a> / <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="license noopener">CC BY-SA</a>.`}
+  credit={`Retreat photography via Pexels. Yoga © Sumit Bose (Wikimedia Commons, CC BY 3.0); hero film “Maasai people singing and dancing” © Bigvai Muhoti (CC BY-SA).`}
   announce
 >
 
@@ -20,122 +20,288 @@ import Base from '../layouts/BaseLayout.astro';
     </div>
     <div class="hero__scrim"></div>
     <div class="container hero__content">
-      <p class="eyebrow eyebrow--light reveal">Women's luxury travel · East Africa</p>
+      <p class="eyebrow eyebrow--light reveal">Luxury retreats for women · Africa, Asia, Europe &amp; beyond</p>
       <h1 class="hero__title reveal">Where Every Path<br/>Tells a Story</h1>
-      <p class="hero__lead reveal">Curated travel experiences for women exploring East Africa.</p>
+      <p class="hero__lead reveal">One themed retreat every month. Ten women. A year of journeys designed by women, for women.</p>
       <div class="hero__actions reveal">
-        <a href="#destinations" class="btn btn--gold">Explore East Africa</a>
-        <a href="#journeys" class="btn btn--ghost">Signature trips</a>
-        <a href="custom-safaris.html" class="btn btn--ghost">Custom Safaris</a>
+        <a href="#calendar" class="btn btn--gold">See the 2027 calendar</a>
+        <a href="#retreats" class="btn btn--ghost">Explore retreats</a>
+        <a href="#host" class="btn btn--ghost">Host your own</a>
       </div>
       <ul class="hero__trust reveal">
-        <li>Intimate groups of 8–12</li>
+        <li>Just 10 women per retreat</li>
         <li>Designed by women, for women</li>
-        <li>Hand-picked stays</li>
+        <li>A new theme every month</li>
         <li>On-trip concierge</li>
       </ul>
     </div>
-    <a href="#destinations" class="hero__scroll" aria-label="Scroll to explore">
+    <a href="#retreats" class="hero__scroll" aria-label="Scroll to explore">
       <span class="hero__scroll-text">Scroll to explore</span>
       <span class="hero__scroll-dot"></span>
     </a>
   </section>
 
-  <!-- Destinations -->
-  <section class="section section--cream destinations" id="destinations">
+  <!-- Retreat collections (5 pillars) -->
+  <section class="section section--cream destinations" id="retreats">
     <div class="container">
       <div class="section__head reveal">
-        <p class="eyebrow">Destinations</p>
-        <h2 class="section__title">Explore East Africa</h2>
+        <p class="eyebrow">Signature retreats</p>
+        <h2 class="section__title">Retreats for women, around the world</h2>
+        <p class="section__intro">One themed retreat every month, each for just ten women. Start in Africa, then travel on to Asia, Europe, and the Middle East &amp; North Africa, or host a retreat of your own.</p>
       </div>
 
-      <div class="dest__grid">
-        <a class="dest reveal" href="kenya.html" style="background-image:url('assets/img/kenya.jpg');background-size:cover;background-position:center">
+      <div class="dest__grid regions__grid">
+        <a class="dest reveal" href="#calendar" data-region="africa" style="background-image:url('assets/img/region-africa.jpg');background-size:cover;background-position:center">
           <div class="dest__body">
-            <h3>Kenya</h3>
-            <p>The birthplace of safari</p>
+            <h3>Africa Retreats</h3>
+            <p>Safari, coast &amp; islands</p>
           </div>
         </a>
-        <a class="dest reveal" href="tanzania.html" style="background-image:url('assets/img/tanzania.jpg');background-size:cover;background-position:center">
+        <a class="dest reveal" href="#calendar" data-region="asia" style="background-image:url('assets/img/region-asia.jpg');background-size:cover;background-position:center">
           <div class="dest__body">
-            <h3>Tanzania</h3>
-            <p>Serengeti &amp; the Maasai</p>
+            <h3>Asia Retreats</h3>
+            <p>Bali, Thailand &amp; beyond</p>
           </div>
         </a>
-        <a class="dest reveal" href="uganda.html" style="background-image:url('assets/img/uganda.jpg');background-size:cover;background-position:center">
+        <a class="dest reveal" href="#calendar" data-region="europe" style="background-image:url('assets/img/region-europe.jpg');background-size:cover;background-position:center">
           <div class="dest__body">
-            <h3>Uganda</h3>
-            <p>Tree-climbing lions</p>
+            <h3>Europe Retreats</h3>
+            <p>Italy, Greece &amp; the Med</p>
           </div>
         </a>
-        <a class="dest reveal" href="rwanda.html" style="background-image:url('assets/img/rwanda.jpg');background-size:cover;background-position:center">
+        <a class="dest reveal" href="#calendar" data-region="mena" style="background-image:url('assets/img/region-mena.jpg');background-size:cover;background-position:center">
           <div class="dest__body">
-            <h3>Rwanda</h3>
-            <p>The land of a thousand hills</p>
+            <h3>Middle East &amp; North Africa</h3>
+            <p>Morocco, Dubai &amp; Oman</p>
+          </div>
+        </a>
+        <a class="dest reveal" href="#host" style="background-image:url('assets/img/hero-women.jpg');background-size:cover;background-position:center">
+          <div class="dest__body">
+            <h3>Host Your Own Retreat</h3>
+            <p>Your group, your theme</p>
           </div>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Upcoming Journeys -->
-  <section class="section section--cream journeys" id="journeys">
+  <!-- 2027 Retreat Calendar -->
+  <section class="section section--cream journeys" id="calendar">
     <div class="container">
       <div class="section__head reveal">
-        <p class="eyebrow">Upcoming journeys</p>
-        <h2 class="section__title">Signature Trips</h2>
-        <p class="section__intro">Small-group departures. Reserve your spot.</p>
+        <p class="eyebrow">2027 retreat calendar</p>
+        <h2 class="section__title">One retreat a month. Ten women.</h2>
+        <p class="section__intro">Every retreat has its own theme and only ten places. Prices are per person and include your stays, meals, activities and on-trip host; flights are not included.</p>
       </div>
 
-      <div class="journeys__grid">
-        <article class="journey reveal">
-          <div class="journey__media" style="background-image:url('assets/img/trip-family.jpg')">
-            <span class="journey__tag">Kenya · Family</span>
+      <div class="cal-filters reveal" role="group" aria-label="Filter retreats by region">
+        <button type="button" class="cal-filter is-active" data-filter="all">All</button>
+        <button type="button" class="cal-filter" data-filter="africa">Africa</button>
+        <button type="button" class="cal-filter" data-filter="asia">Asia</button>
+        <button type="button" class="cal-filter" data-filter="europe">Europe</button>
+        <button type="button" class="cal-filter" data-filter="mena">Middle East &amp; North Africa</button>
+      </div>
+
+      <div class="journeys__grid" id="calendarGrid">
+        <article class="journey retreat reveal" data-region="africa">
+          <div class="journey__media" style="background-image:url('assets/img/retreat-yoga.jpg')">
+            <span class="retreat__month">Jan<em>2027</em></span>
+            <span class="journey__tag">Nanyuki, Kenya</span>
           </div>
           <div class="journey__body">
-            <h3>Mummy and Me Safari</h3>
-            <p class="journey__meta">5 days · Mothers &amp; children</p>
-            <p>A carefully crafted family adventure where mothers and children bond over wildlife encounters, bush walks, and starlit stories.</p>
+            <h3>New Year, New You</h3>
+            <p class="journey__meta">January · 6 days · Vision &amp; wellness</p>
+            <p>Start the year with intention. Guided goal-setting and vision-board workshops, a personal plan for the year ahead, sunrise yoga, breathwork and spa time under Mount Kenya.</p>
             <div class="journey__foot">
-              <span class="journey__price">from <strong>$4,900</strong> <em>/ person</em></span>
-              <a href="mummy-and-me-safari.html" class="link-arrow">Learn more →</a>
+              <span class="journey__price">from <strong>$3,900</strong> <em>/ person</em></span>
+              <a href="new-year-new-you.html" class="link-arrow">Learn more →</a>
             </div>
           </div>
         </article>
-
-        <article class="journey reveal">
+        <article class="journey retreat reveal" data-region="africa">
+          <div class="journey__media" style="background-image:url('assets/img/trip-zanzibar.jpg')">
+            <span class="retreat__month">Feb<em>2027</em></span>
+            <span class="journey__tag">Zanzibar</span>
+          </div>
+          <div class="journey__body">
+            <h3>The Self-Love Retreat</h3>
+            <p class="journey__meta">February · 7 days · Rest &amp; self-care</p>
+            <p>A Galentine's month escape on Zanzibar's white-sand coast. Slow mornings, journaling circles, spa rituals, spice-farm walks and sunset dhow cruises.</p>
+            <div class="journey__foot">
+              <span class="journey__price">from <strong>$4,200</strong> <em>/ person</em></span>
+              <a href="self-love-retreat.html" class="link-arrow">Learn more →</a>
+            </div>
+          </div>
+        </article>
+        <article class="journey retreat reveal" data-region="africa">
+          <div class="journey__media" style="background-image:url('assets/img/cal-mar.jpg')">
+            <span class="retreat__month">Mar<em>2027</em></span>
+            <span class="journey__tag">Maasai Mara, Kenya</span>
+          </div>
+          <div class="journey__body">
+            <h3>Women's Month Safari</h3>
+            <p class="journey__meta">March · 6 days · Safari &amp; sisterhood</p>
+            <p>Celebrate International Women's Day in the wild. Game drives with women guides, time with Maasai women's collectives and a bush dinner under the stars.</p>
+            <div class="journey__foot">
+              <span class="journey__price">from <strong>$5,400</strong> <em>/ person</em></span>
+              <a href="contact.html?trip=Women%27s%20Month%20Safari%20%28March%202027%29" class="link-arrow">Reserve →</a>
+            </div>
+          </div>
+        </article>
+        <article class="journey retreat reveal" data-region="asia">
+          <div class="journey__media" style="background-image:url('assets/img/cal-apr.jpg')">
+            <span class="retreat__month">Apr<em>2027</em></span>
+            <span class="journey__tag">Ubud &amp; Uluwatu, Bali</span>
+          </div>
+          <div class="journey__body">
+            <h3>The Spiritual Reset</h3>
+            <p class="journey__meta">April · 8 days · Yoga &amp; renewal</p>
+            <p>Rice-terrace walks, temple blessings, daily yoga and a traditional Balinese healer, then barefoot days on the Uluwatu cliffs.</p>
+            <div class="journey__foot">
+              <span class="journey__price">from <strong>$4,600</strong> <em>/ person</em></span>
+              <a href="contact.html?trip=The%20Spiritual%20Reset%20%28April%202027%29" class="link-arrow">Reserve →</a>
+            </div>
+          </div>
+        </article>
+        <article class="journey retreat reveal" data-region="europe">
+          <div class="journey__media" style="background-image:url('assets/img/cal-may.jpg')">
+            <span class="retreat__month">May<em>2027</em></span>
+            <span class="journey__tag">Amalfi Coast, Italy</span>
+          </div>
+          <div class="journey__body">
+            <h3>La Dolce Vita</h3>
+            <p class="journey__meta">May · 7 days · Food, wine &amp; slow living</p>
+            <p>Lemon groves, cooking with a local nonna, wine tastings and private boat days along the most beautiful coastline in Europe.</p>
+            <div class="journey__foot">
+              <span class="journey__price">from <strong>$6,800</strong> <em>/ person</em></span>
+              <a href="contact.html?trip=La%20Dolce%20Vita%20%28May%202027%29" class="link-arrow">Reserve →</a>
+            </div>
+          </div>
+        </article>
+        <article class="journey retreat reveal" data-region="mena">
+          <div class="journey__media" style="background-image:url('assets/img/cal-jun.jpg')">
+            <span class="retreat__month">Jun<em>2027</em></span>
+            <span class="journey__tag">Marrakech &amp; Sahara, Morocco</span>
+          </div>
+          <div class="journey__body">
+            <h3>Desert &amp; Hammam</h3>
+            <p class="journey__meta">June · 7 days · Beauty rituals &amp; adventure</p>
+            <p>Riad living in the Medina, hammam and argan rituals, souk treasure-hunting, then a night in a luxury camp in the Sahara dunes.</p>
+            <div class="journey__foot">
+              <span class="journey__price">from <strong>$4,900</strong> <em>/ person</em></span>
+              <a href="contact.html?trip=Desert%20%26%20Hammam%20%28June%202027%29" class="link-arrow">Reserve →</a>
+            </div>
+          </div>
+        </article>
+        <article class="journey retreat reveal" data-region="africa">
+          <div class="journey__media" style="background-image:url('assets/img/cal-jul.jpg')">
+            <span class="retreat__month">Jul<em>2027</em></span>
+            <span class="journey__tag">Maasai Mara, Kenya</span>
+          </div>
+          <div class="journey__body">
+            <h3>The Great Migration</h3>
+            <p class="journey__meta">July · 6 days · Wildlife &amp; wonder</p>
+            <p>The greatest show on earth, at its peak. River crossings, a dawn hot-air balloon and evenings around the fire with women who get it.</p>
+            <div class="journey__foot">
+              <span class="journey__price">from <strong>$6,200</strong> <em>/ person</em></span>
+              <a href="contact.html?trip=The%20Great%20Migration%20%28July%202027%29" class="link-arrow">Reserve →</a>
+            </div>
+          </div>
+        </article>
+        <article class="journey retreat reveal" data-region="europe">
+          <div class="journey__media" style="background-image:url('assets/img/cal-aug.jpg')">
+            <span class="retreat__month">Aug<em>2027</em></span>
+            <span class="journey__tag">Santorini &amp; Naxos, Greece</span>
+          </div>
+          <div class="journey__body">
+            <h3>Sun &amp; Soul</h3>
+            <p class="journey__meta">August · 7 days · Island living</p>
+            <p>Whitewashed villages, caldera sunsets, sailing between islands and long Greek lunches by the sea.</p>
+            <div class="journey__foot">
+              <span class="journey__price">from <strong>$6,500</strong> <em>/ person</em></span>
+              <a href="contact.html?trip=Sun%20%26%20Soul%20%28August%202027%29" class="link-arrow">Reserve →</a>
+            </div>
+          </div>
+        </article>
+        <article class="journey retreat reveal" data-region="africa">
+          <div class="journey__media" style="background-image:url('assets/img/cal-sep.jpg')">
+            <span class="retreat__month">Sep<em>2027</em></span>
+            <span class="journey__tag">Volcanoes &amp; Kigali, Rwanda</span>
+          </div>
+          <div class="journey__body">
+            <h3>Wild Wellness</h3>
+            <p class="journey__meta">September · 6 days · Gorillas &amp; mindfulness</p>
+            <p>An hour with the mountain gorillas, forest bathing, spa time at a volcano-view lodge and Kigali's women-led art and design scene.</p>
+            <div class="journey__foot">
+              <span class="journey__price">from <strong>$6,900</strong> <em>/ person</em></span>
+              <a href="contact.html?trip=Wild%20Wellness%20%28September%202027%29" class="link-arrow">Reserve →</a>
+            </div>
+          </div>
+        </article>
+        <article class="journey retreat reveal" data-region="asia">
+          <div class="journey__media" style="background-image:url('assets/img/cal-oct.jpg')">
+            <span class="retreat__month">Oct<em>2027</em></span>
+            <span class="journey__tag">Krabi, Thailand</span>
+          </div>
+          <div class="journey__body">
+            <h3>Mindful Asia</h3>
+            <p class="journey__meta">October · 8 days · Wellness &amp; beaches</p>
+            <p>Thai massage, meditation with a local teacher, island-hopping by longtail boat and slow days on the Andaman Sea.</p>
+            <div class="journey__foot">
+              <span class="journey__price">from <strong>$4,400</strong> <em>/ person</em></span>
+              <a href="contact.html?trip=Mindful%20Asia%20%28October%202027%29" class="link-arrow">Reserve →</a>
+            </div>
+          </div>
+        </article>
+        <article class="journey retreat reveal" data-region="africa">
           <div class="journey__media" style="background-image:url('assets/img/trip-lamu.jpg')">
-            <span class="journey__tag">Lamu, Kenya · Wellness</span>
+            <span class="retreat__month">Nov<em>2027</em></span>
+            <span class="journey__tag">Lamu, Kenya</span>
           </div>
           <div class="journey__body">
             <h3>Lamu Yoga Festival</h3>
-            <p class="journey__meta">5 days · Women &amp; men · adults only</p>
-            <p>Join Kenya's beloved Lamu Yoga &amp; Wellbeing Festival on the Swahili coast — five days of beachfront yoga, meditation and workshops, with dhow cruises, mangrove swims and Swahili feasts across the islands of Lamu and Manda.</p>
+            <p class="journey__meta">November · 5 days · Yoga on the Swahili coast</p>
+            <p>Join Kenya's beloved Lamu Yoga &amp; Wellbeing Festival: beachfront yoga, workshops, dhow sails and Swahili feasts on Lamu and Manda.</p>
             <div class="journey__foot">
               <span class="journey__price">from <strong>$5,600</strong> <em>/ person</em></span>
               <a href="lamu-yoga-festival.html" class="link-arrow">Learn more →</a>
             </div>
           </div>
         </article>
-
-        <article class="journey reveal">
-          <div class="journey__media" style="background-image:url('assets/img/trip-zanzibar.jpg')">
-            <span class="journey__tag">Zanzibar · Women-only</span>
+        <article class="journey retreat reveal" data-region="mena">
+          <div class="journey__media" style="background-image:url('assets/img/cal-dec.jpg')">
+            <span class="retreat__month">Dec<em>2027</em></span>
+            <span class="journey__tag">Dubai, UAE</span>
           </div>
           <div class="journey__body">
-            <h3>Zanzibar Women's Retreat</h3>
-            <p class="journey__meta">7 days · Women-only</p>
-            <p>A week of sun, spice, and sisterhood on Zanzibar's pristine beaches. Daily yoga, cooking classes, and sunset dhow cruises.</p>
+            <h3>Glow &amp; Celebrate</h3>
+            <p class="journey__meta">December · 5 days · Year-end celebration</p>
+            <p>Close the year in style. Desert sunset dinner, spa day, rooftop evenings and a farewell gala to celebrate everything you did this year.</p>
             <div class="journey__foot">
-              <span class="journey__price">from <strong>$6,200</strong> <em>/ person</em></span>
-              <a href="zanzibar-womens-retreat.html" class="link-arrow">Learn more →</a>
+              <span class="journey__price">from <strong>$5,800</strong> <em>/ person</em></span>
+              <a href="contact.html?trip=Glow%20%26%20Celebrate%20%28December%202027%29" class="link-arrow">Reserve →</a>
             </div>
           </div>
         </article>
       </div>
+    </div>
+  </section>
 
-      <div class="journeys__cta reveal">
-        <a href="mailto:hello@rendiletravels.com" class="btn btn--gold">Explore all trips</a>
+  <!-- Host your own retreat -->
+  <section class="section host" id="host">
+    <div class="container host__inner">
+      <div class="host__media reveal" style="background-image:url('assets/img/hero-women.jpg')"></div>
+      <div class="host__body reveal">
+        <p class="eyebrow">Host your own retreat</p>
+        <h2 class="section__title">Your circle. Your theme. We handle everything.</h2>
+        <p>Bring your own group of women, for a milestone birthday, a bridal trip, a book club, a wellness community or a women's leadership team. Choose any of our destinations and a theme, and we design a private retreat around you.</p>
+        <ul class="host__list">
+          <li>Private groups of 6 or more</li>
+          <li>Any destination: Africa, Asia, Europe, the Middle East &amp; North Africa</li>
+          <li>Yoga teachers, coaches, chefs and photographers arranged for you</li>
+          <li>One planner from first call to final farewell</li>
+        </ul>
+        <a href="contact.html?trip=Host%20Your%20Own%20Retreat" class="btn btn--gold">Plan your retreat</a>
       </div>
     </div>
   </section>
@@ -163,140 +329,8 @@ import Base from '../layouts/BaseLayout.astro';
         <article class="pillar reveal">
           <span class="pillar__num">03</span>
           <h3>Intimate by Design</h3>
-          <p>Small groups of 8–12, or fully private. Real connections, not crowds — and safety woven through every day.</p>
+          <p>Just ten women per retreat, or fully private when you host your own. Real connections, not crowds, and safety woven through every day.</p>
         </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Long weekends / short escapes -->
-  <section class="section section--cream weekends" id="weekends">
-    <div class="container">
-      <div class="section__head reveal">
-        <p class="eyebrow">Short on time?</p>
-        <h2 class="section__title">Long weekends</h2>
-        <p class="section__intro">Three days, one unforgettable escape. Fly-in getaways for when you can only slip away briefly — a weekend on safari, an hour with the gorillas, or barefoot on the Swahili coast.</p>
-      </div>
-      <div class="feat__grid">
-        <a class="feat reveal" href="weekend-mara.html">
-          <div class="feat__img" style="background-image:url('assets/img/kenya-cheetah.jpg')"></div>
-          <div class="feat__body">
-            <h3>A Weekend in the Mara</h3>
-            <p>Fly in to the Maasai Mara for two nights of game drives in big-cat country. 3 days.</p>
-            <div class="feat__foot">
-              <span class="feat__price">from <strong>$1,490</strong></span>
-              <span class="feat__view">View itinerary →</span>
-            </div>
-          </div>
-        </a>
-
-        <a class="feat reveal" href="gorillas-in-a-weekend.html">
-          <div class="feat__img" style="background-image:url('assets/img/rw-volcanoes.jpg')"></div>
-          <div class="feat__body">
-            <h3>Gorillas in a Weekend</h3>
-            <p>A fly-in trek to Rwanda's Volcanoes for a face-to-face hour with mountain gorillas. 3 days.</p>
-            <div class="feat__foot">
-              <span class="feat__price">from <strong>$2,400</strong></span>
-              <span class="feat__view">View itinerary →</span>
-            </div>
-          </div>
-        </a>
-
-        <a class="feat reveal" href="swahili-coast-escape.html">
-          <div class="feat__img" style="background-image:url('assets/img/lamu-hero.jpg')"></div>
-          <div class="feat__body">
-            <h3>Swahili Coast Escape</h3>
-            <p>Barefoot days, dhow sails and fresh seafood on Kenya's Indian Ocean coast. 3 days.</p>
-            <div class="feat__foot">
-              <span class="feat__price">from <strong>$890</strong></span>
-              <span class="feat__view">View itinerary →</span>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Add-on experiences / resident escapes -->
-  <section class="section section--cream experiences" id="experiences">
-    <div class="container">
-      <div class="section__head reveal">
-        <p class="eyebrow">Already in East Africa?</p>
-        <h2 class="section__title">Off-the-beaten-path escapes</h2>
-        <p class="section__intro">For those who already know the region — the experiences most travellers miss. Big-game fishing, kitesurfing, riding, camel treks and the wild frontier. Short, special, and often at resident rates.</p>
-      </div>
-      <div class="feat__grid">
-        <a class="feat reveal" href="tuna-fishing-lamu.html">
-          <div class="feat__img" style="background-image:url('assets/img/kenya-lamu.jpg')"></div>
-          <div class="feat__body">
-            <h3>Big-Game Fishing in Lamu</h3>
-            <p>Sailfish &amp; tuna off the archipelago, then barefoot Swahili luxury. 3 days.</p>
-            <div class="feat__foot">
-              <span class="feat__price">from <strong>$1,650</strong></span>
-              <span class="feat__view">View itinerary →</span>
-            </div>
-          </div>
-        </a>
-
-        <a class="feat reveal" href="kitesurfing-diani.html">
-          <div class="feat__img" style="background-image:url('assets/img/diani-beach.jpg')"></div>
-          <div class="feat__body">
-            <h3>Kitesurfing in Diani</h3>
-            <p>Catch the wind on Galu Beach, warm shallow water, certified instructors. 3 days.</p>
-            <div class="feat__foot">
-              <span class="feat__price">from <strong>$980</strong></span>
-              <span class="feat__view">View itinerary →</span>
-            </div>
-          </div>
-        </a>
-
-        <a class="feat reveal" href="horseback-nanyuki.html">
-          <div class="feat__img" style="background-image:url('assets/img/horse-safari.jpg')"></div>
-          <div class="feat__body">
-            <h3>Horseback Safari in Nanyuki</h3>
-            <p>Ride the Laikipia plains with zebra and giraffe, Mount Kenya on the horizon. 3 days.</p>
-            <div class="feat__foot">
-              <span class="feat__price">from <strong>$1,750</strong></span>
-              <span class="feat__view">View itinerary →</span>
-            </div>
-          </div>
-        </a>
-
-        <a class="feat reveal" href="camel-trek-northern.html">
-          <div class="feat__img" style="background-image:url('assets/img/camel-trek.jpg')"></div>
-          <div class="feat__body">
-            <h3>Camel Trek in the Northern Frontier</h3>
-            <p>Walk the wild north with Samburu guides, sleeping out under the stars. 3 days.</p>
-            <div class="feat__foot">
-              <span class="feat__price">from <strong>$1,550</strong></span>
-              <span class="feat__view">View itinerary →</span>
-            </div>
-          </div>
-        </a>
-
-        <a class="feat reveal" href="northern-kenya-desert.html">
-          <div class="feat__img" style="background-image:url('assets/img/kenya-samburu.jpg')"></div>
-          <div class="feat__body">
-            <h3>Northern Kenya Desert Safari</h3>
-            <p>To the edge of the map — jade Lake Turkana and the shimmering Chalbi Desert. 4 days.</p>
-            <div class="feat__foot">
-              <span class="feat__price">from <strong>$2,950</strong></span>
-              <span class="feat__view">View itinerary →</span>
-            </div>
-          </div>
-        </a>
-
-        <a class="feat reveal" href="balloon-mara.html">
-          <div class="feat__img" style="background-image:url('assets/img/kenya.jpg')"></div>
-          <div class="feat__body">
-            <h3>Hot-Air Balloon over the Mara</h3>
-            <p>Drift over the plains at dawn, then a champagne bush breakfast. 2 days.</p>
-            <div class="feat__foot">
-              <span class="feat__price">from <strong>$1,290</strong></span>
-              <span class="feat__view">View itinerary →</span>
-            </div>
-          </div>
-        </a>
       </div>
     </div>
   </section>
@@ -316,7 +350,7 @@ import Base from '../layouts/BaseLayout.astro';
           <figcaption><strong>Wanjiru K.</strong><span>Nairobi → Maasai Mara &amp; Serengeti</span></figcaption>
         </figure>
         <figure class="review">
-          <blockquote>"The women-only departure was the trip of my life. Twelve strangers on day one, friends for life by day seven. Rendile handled everything — I just had to show up and feel."</blockquote>
+          <blockquote>"The women-only departure was the trip of my life. Ten strangers on day one, friends for life by day seven. Rendile handled everything — I just had to show up and feel."</blockquote>
           <figcaption><strong>Amara O.</strong><span>London → Rwanda &amp; Uganda</span></figcaption>
         </figure>
         <figure class="review">
@@ -334,7 +368,7 @@ import Base from '../layouts/BaseLayout.astro';
     <div class="container newsletter__inner reveal">
       <div>
         <h3>Travel notes for women, now and then</h3>
-        <p>Curated travel experiences for women exploring East Africa — departure dates, secret stays and quiet inspiration. Never spam.</p>
+        <p>New retreat dates, early-bird places and quiet inspiration for women who travel. Never spam.</p>
       </div>
       <form class="newsletter__form" id="newsletterForm">
         <input type="email" placeholder="Enter your email" aria-label="Email address" required />

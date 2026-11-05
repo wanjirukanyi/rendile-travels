@@ -431,3 +431,37 @@ a.feat:hover .feat__view{color:var(--gold)}
   *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
   .reveal{opacity:1;transform:none}
 }
+
+/* ---------- Retreats: 5 region tiles, 2027 calendar, host-your-own ---------- */
+.regions__grid{grid-template-columns:repeat(5,1fr);gap:1.2rem}
+.regions__grid .dest__body{padding:1.4rem}
+.regions__grid .dest__body h3{font-size:1.45rem;line-height:1.15}
+.cal-filters{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem;margin:-1rem 0 2.6rem}
+.cal-filter{font-family:var(--ui);font-size:.74rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;padding:.7em 1.3em;border-radius:30px;border:1px solid var(--line);background:#fff;color:var(--ink-soft);cursor:pointer;transition:.25s}
+.cal-filter:hover{border-color:var(--gold);color:var(--ink)}
+.cal-filter.is-active{background:var(--gold);border-color:var(--gold);color:#fff}
+.retreat.is-hidden{display:none}
+.retreat__month{position:absolute;top:14px;right:14px;background:#fff;color:var(--ink);border-radius:12px;padding:.45em .8em;text-align:center;font-family:var(--serif);font-size:1.3rem;font-weight:600;line-height:1;box-shadow:0 6px 18px -8px rgba(0,0,0,.4)}
+.retreat__month em{display:block;font-style:normal;font-family:var(--ui);font-size:.6rem;letter-spacing:.14em;color:var(--gold);margin-top:.25em}
+.host__inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.host__media{min-height:460px;border-radius:16px;background-size:cover;background-position:center}
+.host__body .section__title{text-align:left;margin:.4rem 0 1.2rem}
+.host__body>p{color:var(--ink-soft)}
+.host__list{list-style:none;padding:0;margin:1.4rem 0 2rem;display:grid;gap:.7rem}
+.host__list li{position:relative;padding-left:1.6rem;color:var(--ink-soft)}
+.host__list li::before{content:"";position:absolute;left:0;top:.55em;width:8px;height:8px;border-radius:50%;background:var(--gold)}
+@media (max-width:980px){.regions__grid{grid-template-columns:repeat(3,1fr)}.host__inner{grid-template-columns:1fr;gap:2.4rem}.host__media{min-height:320px}}
+@media (max-width:620px){.regions__grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:420px){.regions__grid{grid-template-columns:1fr}}
+/* nav has 6 items now: keep labels on one line, switch to the menu button earlier */
+.nav a{white-space:nowrap}
+@media (max-width:1180px){.nav{gap:1.4rem}.nav a{font-size:.76rem;letter-spacing:.06em}}
+@media (max-width:960px){
+  .nav{position:fixed;inset:64px 0 auto 0;background:var(--ivory);flex-direction:column;gap:0;padding:1rem 0;border-bottom:1px solid var(--line);transform:translateY(-130%);transition:transform .4s ease;box-shadow:var(--shadow)}
+  .nav.open{transform:translateY(0)}
+  .nav a{width:100%;padding:1rem 28px;border-bottom:1px solid var(--line);font-size:.82rem}
+  .nav a:not(.nav__cta)::after{display:none}
+  .nav__cta{margin:1rem 28px;text-align:center}
+  .nav-toggle{display:flex}
+}
+.retreat .journey__media{background-position:center 30%}

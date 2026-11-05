@@ -217,3 +217,26 @@
     }
   } catch (e) {}
 })();
+
+/* ---- 2027 calendar: filter retreats by region (buttons + region tiles) ---- */
+(function () {
+  'use strict';
+  var grid = document.getElementById('calendarGrid');
+  if (!grid) return;
+  var cards = grid.querySelectorAll('.retreat');
+  var btns = document.querySelectorAll('.cal-filter');
+  function apply(region) {
+    cards.forEach(function (c) {
+      var show = region === 'all' || c.getAttribute('data-region') === region;
+      c.classList.toggle('is-hidden', !show);
+      if (show) c.classList.add('in');
+    });
+    btns.forEach(function (b) { b.classList.toggle('is-active', b.getAttribute('data-filter') === region); });
+  }
+  btns.forEach(function (b) {
+    b.addEventListener('click', function () { apply(b.getAttribute('data-filter')); });
+  });
+  document.querySelectorAll('a.dest[data-region]').forEach(function (a) {
+    a.addEventListener('click', function () { apply(a.getAttribute('data-region')); });
+  });
+})();
