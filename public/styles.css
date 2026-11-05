@@ -465,3 +465,12 @@ a.feat:hover .feat__view{color:var(--gold)}
   .nav-toggle{display:flex}
 }
 .retreat .journey__media{background-position:center 30%}
+
+/* Lighter hero overlay so the cover video shows through: a soft shade only behind the
+   centred text, a light fade at the top (nav) and bottom (trust row), and stronger text shadows. */
+.hero__scrim{background:
+  radial-gradient(ellipse 55% 50% at 50% 50%,rgba(20,16,12,.34) 0%,rgba(20,16,12,.14) 60%,rgba(20,16,12,0) 100%),
+  linear-gradient(to bottom,rgba(20,16,12,.28) 0%,rgba(20,16,12,0) 22%,rgba(20,16,12,0) 68%,rgba(20,16,12,.42) 100%)}
+.hero__title{text-shadow:0 2px 6px rgba(0,0,0,.35),0 4px 34px rgba(0,0,0,.45)}
+.hero__lead{text-shadow:0 1px 4px rgba(0,0,0,.55),0 2px 18px rgba(0,0,0,.45);font-weight:400}
+.hero__trust li{text-shadow:0 1px 4px rgba(0,0,0,.6),0 2px 12px rgba(0,0,0,.45)}
