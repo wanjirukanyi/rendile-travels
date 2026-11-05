@@ -474,3 +474,7 @@ a.feat:hover .feat__view{color:var(--gold)}
 .hero__title{text-shadow:0 2px 6px rgba(0,0,0,.35),0 4px 34px rgba(0,0,0,.45)}
 .hero__lead{text-shadow:0 1px 4px rgba(0,0,0,.55),0 2px 18px rgba(0,0,0,.45);font-weight:400}
 .hero__trust li{text-shadow:0 1px 4px rgba(0,0,0,.6),0 2px 12px rgba(0,0,0,.45)}
+/* Keep the trust row clear of the "Scroll to explore" indicator */
+.hero__content{padding-bottom:8.5rem}
+.hero__trust{max-width:940px}
+@media (max-width:760px){.hero__content{padding-bottom:7rem}}
