@@ -21,6 +21,8 @@ const {
   credit,
   announce = false,
 } = Astro.props;
+// Changes on every build so browsers always fetch the latest CSS and JS
+const v = Date.now().toString(36);
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -40,7 +42,7 @@ const {
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href={`/styles.css?v=${v}`} />
   {jsonld && <script type="application/ld+json" is:inline set:html={jsonld} />}
 </head>
 <body>
@@ -121,6 +123,6 @@ const {
     {credit && <div class="container footer__credit" set:html={credit} />}
   </footer>
 
-  <script is:inline src="/script.js"></script>
+  <script is:inline src={`/script.js?v=${v}`}></script>
 </body>
 </html>

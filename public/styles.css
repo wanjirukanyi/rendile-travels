@@ -479,3 +479,4 @@ a.feat:hover .feat__view{color:var(--gold)}
 .hero__trust{max-width:940px}
 @media (max-width:760px){.hero__content{padding-bottom:7rem}}
 .dest::before{background-position:inherit}
+section[id]{scroll-margin-top:72px}

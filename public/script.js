@@ -239,3 +239,35 @@
     a.addEventListener('click', function () { apply(a.getAttribute('data-region')); });
   });
 })();
+
+/* ---- Refresh always starts at the top (the cover video) ----
+   In page links scroll smoothly without adding "#section" to the address,
+   and a reload clears any leftover "#section" and returns to the top. */
+(function () {
+  'use strict';
+  try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (e) {}
+
+  var navEntry = (performance.getEntriesByType && performance.getEntriesByType('navigation')[0]) || null;
+  var isReload = navEntry ? navEntry.type === 'reload' : (performance.navigation && performance.navigation.type === 1);
+  if (isReload) {
+    if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+    var toTop = function () { window.scrollTo(0, 0); };
+    toTop();
+    window.addEventListener('load', toTop);
+  }
+
+  var here = location.pathname.replace(/\/$/, '/index.html').split('/').pop() || 'index.html';
+  document.addEventListener('click', function (ev) {
+    var a = ev.target.closest && ev.target.closest('a[href*="#"]');
+    if (!a || ev.defaultPrevented || ev.metaKey || ev.ctrlKey || ev.shiftKey) return;
+    var href = a.getAttribute('href');
+    var parts = href.split('#');
+    var page = parts[0].split('/').pop();
+    var samePage = page === '' || page === here || (page === 'index.html' && (here === 'index.html' || here === 'index' || here === ''));
+    if (!samePage || !parts[1]) return;
+    var target = document.getElementById(parts[1]);
+    if (!target) return;
+    ev.preventDefault();
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+})();
