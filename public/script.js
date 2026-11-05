@@ -140,15 +140,16 @@
   var b = document.getElementById('heroVidB');
   if (!a || !b) return;
 
-  // East-Africa montage: lion → zebra → pink flamingos → gorilla → Maasai dancing → tropical beach
-  // maasai.webm: "Maasai people singing and dancing" by Bigvai Muhoti, CC BY-SA 4.0 (credited in footer)
+  // Women's wellness-retreat montage (self-hosted Pexels clips, free to use, no credit needed):
+  // beach yoga -> safari drive -> spa -> group meditation -> elephant -> running into the sea -> friends at dusk
   var clips = [
-    'https://assets.mixkit.co/videos/11035/11035-720.mp4', // male lion walking the savanna
-    'https://assets.mixkit.co/videos/11165/11165-720.mp4', // giraffe & zebra herd
-    'https://assets.mixkit.co/videos/32202/32202-720.mp4', // pink flamingos in the lake (Nakuru)
-    'https://assets.mixkit.co/videos/4177/4177-720.mp4',   // gorilla
-    'assets/videos/maasai.webm',                           // Maasai dancing (CC BY-SA 4.0)
-    'https://assets.mixkit.co/videos/4686/4686-720.mp4'    // tropical tourist beach
+    'assets/videos/wellness-1-beach-yoga.mp4',
+    'assets/videos/wellness-2-safari.mp4',
+    'assets/videos/wellness-3-spa.mp4',
+    'assets/videos/wellness-4-meditation.mp4',
+    'assets/videos/wellness-5-elephant.mp4',
+    'assets/videos/wellness-6-sea.mp4',
+    'assets/videos/wellness-7-friends.mp4'
   ];
 
   // Respect reduced-motion, data-saver, and small screens (keep the poster image instead).

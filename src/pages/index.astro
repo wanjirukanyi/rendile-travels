@@ -7,14 +7,14 @@ import Base from '../layouts/BaseLayout.astro';
   ogTitle={`Rendile Travels — Where Every Path Tells a Story`}
   ogDescription={`One themed retreat a month, ten women each. Africa, Asia, Europe and the Middle East & North Africa, designed by women, for women.`}
   ogType={`website`}
-  ogImage={`assets/logo-orange.png`}
-  credit={`Retreat photography via Pexels. Yoga © Sumit Bose (Wikimedia Commons, CC BY 3.0); hero film “Maasai people singing and dancing” © Bigvai Muhoti (CC BY-SA).`}
+  ogImage={`https://rendiletravels.com/assets/img/hero-cover.jpg`}
+  credit={`Retreat photography via Pexels. Yoga © Sumit Bose (Wikimedia Commons, CC BY 3.0).`}
   announce
 >
 
 <!-- Hero -->
   <section class="hero">
-    <div class="hero__media" style="background-image:url('assets/img/hero-women.jpg')">
+    <div class="hero__media" role="img" aria-label="Women on a wellness retreat: beach yoga, safari, spa and sunsets" style="background-image:url('assets/img/hero-cover.jpg');background-position:center 60%">
       <video class="hero__vid" id="heroVidA" muted playsinline preload="auto" aria-hidden="true"></video>
       <video class="hero__vid" id="heroVidB" muted playsinline preload="none" aria-hidden="true"></video>
     </div>
