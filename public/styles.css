@@ -480,3 +480,7 @@ a.feat:hover .feat__view{color:var(--gold)}
 @media (max-width:760px){.hero__content{padding-bottom:7rem}}
 .dest::before{background-position:inherit}
 section[id]{scroll-margin-top:72px}
+/* Hero: tagline sits under the buttons (checklist row removed) */
+.hero__tagline{margin-top:2.6rem;margin-bottom:0}
+.hero__content{padding-bottom:6rem}
+@media (max-width:760px){.hero__content{padding-bottom:5.5rem}.hero__tagline{margin-top:2rem}}
