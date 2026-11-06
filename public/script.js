@@ -97,8 +97,8 @@
       var firstName = name.value.trim().split(' ')[0];
       var submitBtn = form.querySelector('button[type=submit]');
       if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Sending…'; }
-      // Submit to Netlify Forms (notifies bookings@rendiletravels.com).
-      fetch('/', {
+      // Send to our own endpoint (worker/index.js): saved in Dira and emailed to the team.
+      fetch('/api/enquiry', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(new FormData(form)).toString()
@@ -107,7 +107,7 @@
         showNote('Thank you, ' + firstName + '! Your travel designer will be in touch within one business day.', true);
         form.reset();
       }).catch(function () {
-        showNote('Sorry — something went wrong. Please email us directly at bookings@rendiletravels.com.', false);
+        showNote('Sorry, something went wrong. Please email us directly at bookings@rendiletravels.com.', false);
       }).finally(function () {
         if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Send my enquiry'; }
       });
@@ -121,14 +121,30 @@
     note.style.color = ok ? '#2E7B7C' : '#B3381C';
   }
 
-  /* ---- Newsletter (demo) ---- */
+  /* ---- Newsletter: saved in Dira and emailed to the team ---- */
   var news = document.getElementById('newsletterForm');
   if (news) {
     news.addEventListener('submit', function (e) {
       e.preventDefault();
-      var input = news.querySelector('input');
-      input.value = '';
-      input.placeholder = 'You’re on the list — thank you!';
+      var input = news.querySelector('input[type=email]');
+      var btn = news.querySelector('button');
+      var email = (input.value || '').trim();
+      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { input.focus(); return; }
+      if (btn) { btn.disabled = true; btn.textContent = 'Subscribing…'; }
+      fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({ email: email }).toString()
+      }).then(function (r) {
+        if (!r.ok) throw new Error('bad status');
+        input.value = '';
+        input.placeholder = 'You’re on the list, thank you!';
+      }).catch(function () {
+        input.value = '';
+        input.placeholder = 'Sorry, please try again later';
+      }).finally(function () {
+        if (btn) { btn.disabled = false; btn.textContent = 'Subscribe'; }
+      });
     });
   }
 })();

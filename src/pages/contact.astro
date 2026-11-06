@@ -25,8 +25,7 @@ import Base from '../layouts/BaseLayout.astro';
         </ul>
       </div>
 
-      <form class="inquiry__form reveal" id="inquiryForm" name="inquiry" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" novalidate>
-        <input type="hidden" name="form-name" value="inquiry" />
+      <form class="inquiry__form reveal" id="inquiryForm" name="inquiry" method="POST" action="/api/enquiry" novalidate>
         <p hidden><label>Leave this empty: <input name="bot-field" /></label></p>
         <div class="field">
           <label for="name">Your name</label>
@@ -38,39 +37,37 @@ import Base from '../layouts/BaseLayout.astro';
         </div>
         <div class="field">
           <label for="trip">Trip of interest</label>
-          <input type="text" id="trip" name="trip" placeholder="e.g. Classic Kenya Safari" />
+          <input type="text" id="trip" name="trip" placeholder="e.g. The Self Love Retreat, February 2027" />
         </div>
         <div class="field-row">
           <div class="field">
             <label for="when">When would you like to travel?</label>
-            <input type="text" id="when" name="when" placeholder="e.g. Aug 2026, or flexible" />
+            <input type="text" id="when" name="when" placeholder="e.g. February 2027, or flexible" />
           </div>
           <div class="field">
             <label for="party">Who's travelling?</label>
             <select id="party" name="party">
               <option value="">Select…</option>
-              <option>Just me (solo)</option>
-              <option>Me + partner</option>
-              <option>Group of friends</option>
-              <option>Mum &amp; child(ren)</option>
-              <option>Women only departure</option>
+              <option>Just me</option>
+              <option>Me and a friend</option>
+              <option>A group of friends</option>
+              <option>My own private group (host your own)</option>
             </select>
           </div>
         </div>
         <div class="field">
-          <label>Which trip or experience? <span class="field__hint">(pick any)</span></label>
+          <label>Which retreats interest you? <span class="field__hint">(pick any)</span></label>
           <div class="chips">
-            <label class="chip"><input type="checkbox" name="interest" value="Mummy and Me Safari" /> Mummy &amp; Me</label>
-            <label class="chip"><input type="checkbox" name="interest" value="Lamu Yoga Festival" /> Lamu Yoga</label>
-            <label class="chip"><input type="checkbox" name="interest" value="Zanzibar Retreat" /> Zanzibar Retreat</label>
-            <label class="chip"><input type="checkbox" name="interest" value="Safari" /> Classic Safari</label>
-            <label class="chip"><input type="checkbox" name="interest" value="Gorillas" /> Gorillas</label>
-            <label class="chip"><input type="checkbox" name="interest" value="Tailor-made" /> Tailor made</label>
+            <label class="chip"><input type="checkbox" name="interest" value="Africa retreats" /> Africa</label>
+            <label class="chip"><input type="checkbox" name="interest" value="Asia retreats" /> Asia</label>
+            <label class="chip"><input type="checkbox" name="interest" value="Europe retreats" /> Europe</label>
+            <label class="chip"><input type="checkbox" name="interest" value="Middle East and North Africa retreats" /> Middle East &amp; North Africa</label>
+            <label class="chip"><input type="checkbox" name="interest" value="Host your own retreat" /> Host your own</label>
           </div>
         </div>
         <div class="field">
           <label for="message">Tell us a little more</label>
-          <textarea id="message" name="message" rows="4" placeholder="Your dream trip, must sees, budget range, anything at all…"></textarea>
+          <textarea id="message" name="message" rows="4" placeholder="What you hope to feel, celebrate or explore, budget range, anything at all…"></textarea>
         </div>
         <button type="submit" class="btn btn--gold btn--block">Send my enquiry</button>
         <p class="inquiry__note" id="formNote" hidden></p>

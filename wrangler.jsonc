@@ -1,14 +1,31 @@
 {
   // Cloudflare Worker config for the Rendile Travels site.
-  // No server-side code — this is an "assets-only" Worker that serves the
-  // static HTML/CSS/JS/images Astro produces.
+  //
+  // The site itself is static (Astro builds src/ -> dist/). A small script,
+  // worker/index.js, handles the two form endpoints (/api/enquiry and
+  // /api/subscribe) and hands every other request to the static files.
   //
   // Deploy flow:  npm run build   (compiles src/ -> dist/)
-  //               npx wrangler deploy   (publishes dist/)
+  //               npx wrangler deploy   (publishes dist/ + worker/index.js)
+  // Pushing to main does both automatically (Cloudflare Workers Builds).
   "name": "rendile-travels",
+  "main": "worker/index.js",
   "compatibility_date": "2025-06-25",
   "assets": {
     // Astro's build output. Run `npm run build` first.
-    "directory": "./dist"
-  }
+    "directory": "./dist",
+    "binding": "ASSETS"
+  },
+  // Plain (non secret) settings for the forms. Secrets are set separately:
+  //   npx wrangler secret put SUPABASE_SECRET_KEY
+  //   npx wrangler secret put RESEND_API_KEY
+  "vars": {
+    // Dira (Rendile Ops) Supabase project: enquiries become new customers there.
+    "SUPABASE_URL": "https://vlqoyjfxyoftsybscuse.supabase.co",
+    // Who gets the notification emails. Until the rendiletravels.com domain is
+    // verified in Resend, this must be the same address you signed up to Resend with.
+    "NOTIFY_TO": "bookings@rendiletravels.com",
+    "NOTIFY_FROM": "Rendile Travels website <onboarding@resend.dev>"
+  },
+  "observability": { "enabled": true }
 }

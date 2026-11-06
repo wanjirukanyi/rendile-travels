@@ -10,3 +10,5 @@ __MACOSX/
 node_modules/
 dist/
 .astro/
+.dev.vars
+.wrangler/
